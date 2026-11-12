@@ -75,6 +75,11 @@ Com o emulador Android aberto (ou dispositivo físico conectado via USB com a de
 ```text
 npm test
 ```
+Caso necessite checar o acesso ao aplicativo de forma manual utilize as seguintes credenciais:
+```text
+Usuário: admin
+Senha: 123456
+```
 ## 📊 Relatório e Evidências Visuais
 Durante e após a execução, a automação gerará automaticamente:
 
