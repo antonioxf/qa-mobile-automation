@@ -19,7 +19,19 @@ exports.config = {
         'appium:automationName': 'UiAutomator2',
         'appium:deviceName': 'AndroidDevice',
         'appium:app': path.join(process.cwd(), './app/app-debug.apk'),
+        // --- BYPASS DE INSTALAÇÃO ---
+        'appium:autoGrantPermissions': true, // Concede todas as permissões automaticamente no prompt de instalação
+        'appium:adbExecTimeout': 60000,      // Aumenta o timeout do ADB caso o APK demore para registrar
+        // Flags extras para o ADB ignorar verificações incômodas na instalação
+        'appium:appInstallStrategy': 'serial',
         'appium:noReset': false,
+
+        'appium:chromeOptions': {
+        args: [
+            '--disable-save-password-bubble', 
+            '--disable-autofill-keyboard-access-accessory'
+        ]
+        }
     }],
     services: ['appium'],
     appium: {
